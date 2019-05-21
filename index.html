@@ -4,40 +4,80 @@
 <title>Day Trip </title>
 <link href="style.css" rel="stylesheet" type="text/css" />
 
+<script>
+function hideStop() {
+  document.getElementById("wrapper",).style.display = "none";
+}
+
+</script>
+
+</style>
+<script type="text/javascript">
+// place images in this array
+var random_images_array = ['200x200.png', '200x200-CAR.jpg', 'great-travel-200x200.jpg', 'observadores-200x200.jpg' , 'pl_icon.png', 'StarbucksLogo_2.jpg'];
+    
+function getRandomImage(imgAr, path) {
+    path = path || 'images/'; // default path here
+    var num = Math.floor( Math.random() * imgAr.length );
+    var img = imgAr[ num ];
+    var imgStr = '<img src="' + path + img + '" alt = "">';
+    document.write(imgStr); document.close();
+}
+</script>
+
+
 </head>
 <body>
+
+<div id="background">
+
+<div id="random">
+    <!-- This script segment displays an image from the array -->
+    <script type="text/javascript"> getRandomImage(random_images_array, 'images/')</script>
+
+<center> <button >Refresh to Try Again</button> </center>
+
+</div>
+
+</div>
+
 <div id=""></div>
+ 
 <div id="wrapper">
+<div id="random2"></div>
   <input id="secondroll" name="roll" type="checkbox">
   <input id="roll" name="roll" type="checkbox">
   <label for="roll">Roll it!</label>
-  <label for="secondroll"><span>Stop!</span></label>
+ 
+ <label  onclick="hideStop()", for="secondroll"  > <span>Stop!</span></label>
+ 
   <div id="platform">
+  
     <div id="dice">
       
       <div class="side front">
 	  <a href="#">
-       <img src="https://cdn.tutsplus.com/net/uploads/legacy/197_bestOfJanuary/200x200.png" width="200" height="200" /> 
+       <img src="images/200x200.png" width="400" height="400" /> 
       </div> </a>
       <div class="side front inner"></div>
       <div class="side top">
-        <img src="https://s3.amazonaws.com/premierleague-static-files/premierleague/pl_icon.png" width="200" height="200" /> 
+        <img src="images/200x200-CAR.jpg" width="400" height="400" /> 
       </div>
       <div class="side top inner"></div>
       <div class="side right">
-        <img src="http://dbjohn.org/uploads/testimonials/200x200-CAR.jpg" width="200" height="200" /> 
+        <img src="images/great-travel-200x200.jpg" width="400" height="400" /> 
       </div>
       <div class="side right inner"></div>
       <div class="side left">
-       <img src="http://www.mondotakapuna.nz/wp-content/uploads/2016/03/great-travel-200x200.jpg" width="200" height="200" /> 
+       <img src="images/observadores-200x200.jpg" width="400" height="400" /> 
       </div>
       <div class="side left inner"></div>
       <div class="side bottom">
-        <img src="https://www.segib.org/wp-content/uploads/observadores-200x200.jpg" width="200" height="200" /> 
+        <img src="images/StarbucksLogo_2.jpg" width="400" height="400" /> 
       </div>
       <div class="side bottom inner"></div>
       <div class="side back">
-        <img src="https://library.urnerbarry.com/Images/StarbucksLogo_2.jpg" width="200" height="200" /> 
+        <img src="images/pl_icon.png" width="400" height="400" /> 
       </div>
       <div class="side back inner"></div>
       <div class="side cover x"></div>
@@ -46,6 +86,9 @@
     </div>
   </div>
 </div>
+
+
+ 
 
 
 </body>
